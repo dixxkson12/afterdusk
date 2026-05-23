@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    }
+
+.hero p {
+        font-size: 18px;
+        opacity: 0.7;
+ }
+
+ .hero button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+
+ .hero button:hover {
+    background: white;
+    color: black;
+ }
+
+ /* ABOUT */
+ .about {
+    padding: 100px 20px;
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    opacity: 0.75;
+    font-size: 18px;
+ }
+
+ /* DROP SECTION */
+.drop {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.drop h2 {
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+}
+
+/* PRODUCTS */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 250px;
+    transition: 0.3s;
+}
+
+.product :hover {
+    transform: scale(1.05);
+ }
+
+ .product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: #111;
+ }
+
+ .product h3 {
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+ }
+
+ .product p {
+    opacity: 0.6;
+    margin-top: 5px;
+ }
+
+ /* FOOTER */
+ footer {
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0.5;
+    font-size: 14px;
+ }
+
+ /* ====== PREMIUM ANIMATIONS ====== */
+ 
+ /* smooth page load */
+ body {
+    animation: fadeIn 1.2s ease-in-out;
+ }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+/* HERO BUTTON glow effect */
+.hero button {
+    transition: all 0.4s ease;
+}
+
+.hero button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* PRODUCT hover upgrade */
+.product {
+    transition: transform 0.4s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+}
+
+/* subtle image zoom */
+.product img {
+    transition: transform 0.4s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+/* CART DISPLAY */
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+}
+
+/* ADD TO CART BUTTON */
+.product button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background: white;
+    color: black;
+}
+
+.cart-page {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.cart-item button {
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background: red;
+    color: black;
+}
+
+/* QUANTITY BUTTONS */
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty button {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+/* CHECKOUT BUTTON */
+.checkout-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    opacity: 0.8;
+}

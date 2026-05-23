@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AFTERDUSK</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cart">
+    cart: <span id="cart-count">0</span>
+</div>
+
+    <!-- HERO -->
+     <section class="hero">
+        <h1>AFTERDUSK</h1>
+        <p>Build After Darkness</p>
+        <button>SHOP DROP 01</button>
+     </section>
+
+     <section class="cart-page">
+        <h2>YOUR CART</h2>
+
+        <div id="cart-items"></div>
+
+        <h3 id="cart-total">Total: ₦0</h3>
+
+        <button onclick="placeOrder()" class="checkout-btn">
+            PLACE ORDER
+        </button>
+     </section>
+
+     <!-- ABOUT -->
+      <section class="about">
+            <p>
+                AFTERDUSK is for those built in silence.
+                Not overnight success. Not loud.
+                Just pressure, growth, and identity.
+            </p>
+      </section>
+
+      <!-- FEATURED DROP -->
+       <section class="drop">
+            <h2>DROP 01</h2>
+
+            <div class="product">
+                <img src="hoodie.jpg.jpeg" alt="Hoodie">
+                <h3>GRAPHIC TEE</h3>
+                <p>₦18,000</p>
+                <button onclick="addToCart('Graphic Tee', 18000)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="cap.jpg.jpeg" alt="Cap">
+                <h3>NIGHT CAP</h3>
+                <p>₦10,000</p>
+                <button onclick="addToCart('Night Cap', 10000)">Add to Cart</button>
+            </div>
+
+       </section>
+
+       <!-- FOOTER -->
+        <footer>
+            <p>Follow us on Instagram</p>
+            <p>@ AFTERDUSK</p>
+            </footer>
+
+        <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+        document.getElementById("cart-count").innerText = cart.length;
+    }
+
+    function addToCart(name, price) {
+        let existing = cart.find(item => item.name === name);
+
+        if (existing) {
+            existing.qty++;
+        } else {
+            cart.push({ name, price, qty: 1 });
+        }
+
+        saveCart();
+        renderCart();
+        updateCartCount();
+
+        alert(name + " added to AFTERDUSK");
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        saveCart();
+        renderCart();
+        updateCartCount();
+    }
+
+    function changeQty(index, change) {
+        cart[index].qty += change;
+
+        if (cart[index].qty <= 0) {
+            removeItem(index);
+            return;
+        }
+
+        saveCart();
+        renderCart();
+        updateCartCount();
+    }
+
+    function getTotal() {
+        return cart.reduce((total, item) => total + item.price * item.qty, 0);
+    }
+
+    function renderCart() {
+        let cartBox = document.getElementById("cart-items");
+        let totalBox = document.getElementById("cart-total");
+
+        if (!cartBox || !totalBox) return;
+
+        cartBox.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            cartBox.innerHTML += `
+                <div class="cart-item">
+                    <p>${item.name} - ₦${item.price}</p>
+                    <div class="qty">
+                        <button onclick="changeQty(${index}, -1)">-</button>
+                        <span>${item.qty}</span>
+                        <button onclick="changeQty(${index}, 1)">+</button>
+                    </div>
+                    <button onclick="removeItem(${index})">Remove</button>
+                </div>
+            `;
+        });
+
+        totalBox.innerText = "Total: ₦" + getTotal();
+    }
+
+    function placeOrder() {
+        if (cart.length === 0) {
+            alert("Cart is empty.");
+            return;
+        }
+
+        alert("Order placed successfully AFTERDUSK");
+
+        cart = [];
+        saveCart();
+        renderCart();
+        updateCartCount();
+    }
+
+    updateCartCount();
+    renderCart();
+    </script>
