@@ -276,3 +276,53 @@ body {
     padding: 10px 20px;
     }
 }
+
+
+.hero h1 {
+    font-size: 90px;
+    font-weight: 800;
+    letter-spacing: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+.hero h1 {
+    text-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+.product {
+    background: linear-gradient(145deg, #0a0a0a,#111);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.product:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 15px;
+    }
+    .product img {
+        height: 250px:
+    }
+    .product {
+        width: 90%;
+    }
+    .about {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+.brand-line {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.4;
+    letter-spacing: 3px;
+}
