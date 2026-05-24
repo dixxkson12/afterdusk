@@ -326,3 +326,37 @@ body {
     opacity: 0.4;
     letter-spacing: 3px;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: black;
+}
+nav h2 {
+    color: white;
+}
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav a:hover {
+    opacity: 0.6;
+}
+
+@media (mad-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    nav div {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
