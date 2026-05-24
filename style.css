@@ -406,3 +406,20 @@ h1, h2, h3 {
     }
 }
 
+section {
+    padding: 120px 20px;
+}
+section:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+
+// UPDATE //
+h1 {
+    font-size: 64px;
+    letter-spacing: 4px;
+}
+h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
