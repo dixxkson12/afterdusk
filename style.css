@@ -14,25 +14,24 @@ body {
 
 /* HERO */
 .hero {
-    height: 100vh;
-    display:flex;
+    height: 90vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    gap: 15px;
-}
+   }
 
 .hero h1 {
     font-family: "Playfair Display", serif;
-    font-size: 72px;
+    font-size: 70px;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
+    margin-top: 0;
     }
 
 .hero p {
-        font-size: 14px;
-        opacity: 0.6;
+        font-size: 10px;
+        opacity: 0.5;
  }
 
  .hero button {
@@ -422,4 +421,18 @@ h2 {
     font-size: 28px;
     letter-spacing: 2px;
     opacity: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
 }
