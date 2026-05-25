@@ -23,18 +23,18 @@ body {
 
 .hero h1 {
     font-family: "Playfair Display", serif;
-    font-size: 70px;
+    font-size: 72px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
     margin-top: 0;
     }
 
 .hero p {
         font-size: 14px;
-        opacity: 0.7;
+        opacity: 0.5;
         line-height: 1.8
         mad-width: 600px;
-        margin: 10px auto;
+        margin-top: 12px auto;
  }
 
  .hero button {
@@ -84,11 +84,15 @@ body {
 
 .product {
     width: 250px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.25);
+    pading: 15px;
+    background: transparent;
 }
 
 .product :hover {
-    transform: scale(1.05);
+    transform: translateY(-6px);
+    border-color: rgba(255,255,255,0.25);
  }
 
  .product img {
@@ -301,7 +305,11 @@ body {
         padding: 80px 20px;
     }
     .product {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -358,10 +366,11 @@ nav a {
     color: white;
     margin-left: 15px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
+    opacity: 0.7;
 }
 nav a:hover {
-    opacity: 0.6;
+    opacity: 1;
 }
 
 @media (mad-width: 768px) {
