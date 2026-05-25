@@ -65,20 +65,27 @@ body {
 
  /* DROP SECTION */
 .drop {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .drop h2 {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     letter-spacing: 4px;
+    font-size: 40px;
+}
+.drop p {
+    opacity: 0.6;
+    margin-bottom: 40px;
 }
 
 /* PRODUCTS */
 .products {
-    display: flex;
+    display: grid;
+    grind-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-content: center;
     gap: 30px;
+    max-width: 900px;
     flex-wrap: wrap;
 }
 
@@ -491,3 +498,19 @@ button:hover, a:hover {
     margin-bottom: 20px;
     opacity: 0.8;
 }
+
+.about {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+.about h1 {
+margin-bottom: 30px;
+letter-spacing: 4px;
+}
+.about p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+    
