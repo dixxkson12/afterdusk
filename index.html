@@ -55,11 +55,11 @@
       </section>
 
       <!-- FEATURED DROP -->
-       <section class="drop">
+       <section class="drop fade-in">
             <h2>DROP 01</h2>
             <p>Limited pieces. Built in silence.</p>
 
-            <div class="product">
+            <div class="product fade-in">
                 
                 <div class="products">
                 <img src="mockup.png" alt="Hoodie">
@@ -176,4 +176,17 @@
 
     updateCartCount();
     renderCart();
+
+    const elements = document.querySelectorAll('.fade-in');
+
+    window.addEventListener('scroll', () => {
+        elements.forEach(el => {
+            const position = el.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            if (position < screenHeight - 100) {
+                el.classList.add('show');
+            }
+        });
+    });
     </script>
