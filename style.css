@@ -394,9 +394,10 @@ nav a {
     color: white;
     margin-left: 15px;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     opacity: 0.7;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 nav a:hover {
     opacity: 1;
@@ -413,6 +414,9 @@ nav a:hover {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .hero {
+        padding-top: 40px;
     }
 }
 
@@ -542,4 +546,12 @@ letter-spacing: 4px;
 .fade-in-show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.bg-text {
+    position: absollute;
+    font-size: 140px;
+    opacity: 0.03;
+    letter-spacing: 10px;
+    z-index: 0;
 }
